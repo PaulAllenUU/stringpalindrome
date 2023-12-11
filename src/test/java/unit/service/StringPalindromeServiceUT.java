@@ -1,16 +1,13 @@
-package service;
+package unit.service;
 
-import loweconnex.com.stringpalindrome.service.StringPalindomeService;
 import loweconnex.com.stringpalindrome.service.StringPalindromeServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(MockitoExtension.class)
 public class StringPalindromeServiceUT {

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StringPalindromeServiceImpl implements StringPalindomeService {
 
+
     @Override
     public boolean checkPalindrome(String inputString) throws Exception {
 
@@ -24,12 +25,14 @@ public class StringPalindromeServiceImpl implements StringPalindomeService {
         return true;
     }
 
+    //helper method to validate that the input string is not null
     private void checkInputStringNotNull(String inputString) throws IllegalArgumentException {
         if(inputString == null){
             throw new IllegalArgumentException("Invalid input, input string cannot be null");
         }
     }
 
+    //helper method to validate that the input does not contain any space, punctuation or special character
     private void characterValidation(String inputString) throws IllegalArgumentException {
         for(int i = 0; i< inputString.length(); i++){
             if(!Character.isLetter(inputString.charAt(i)))
