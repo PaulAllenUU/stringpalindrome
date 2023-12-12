@@ -7,7 +7,7 @@ public class StringPalindromeServiceImpl implements StringPalindomeService {
 
 
     @Override
-    public boolean checkPalindrome(String inputString) throws Exception {
+    public boolean checkPalindrome(String inputString) {
 
         int leftPointer = 0, rightPointer = inputString.length()-1;
         String stringAllLower = inputString.toLowerCase();
