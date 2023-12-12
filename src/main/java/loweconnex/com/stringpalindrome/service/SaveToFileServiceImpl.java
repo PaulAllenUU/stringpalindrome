@@ -16,7 +16,7 @@ public class SaveToFileServiceImpl implements SaveToFileService {
     //will check the cache for key : value pairs before performing this operation, improving performance
     @Override
     @Cacheable(cacheNames="isPalindrome", key ="'inputString'")
-    public void writeToFile(String filePath, String inputString, boolean isPalindrome) throws Exception {
+    public void writeToFile(String filePath, String inputString, boolean isPalindrome) {
 
         try(BufferedWriter writer = Files.newBufferedWriter(Path.of(filePath), StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
             writer.write(inputString + " : " + isPalindrome + System.lineSeparator());
