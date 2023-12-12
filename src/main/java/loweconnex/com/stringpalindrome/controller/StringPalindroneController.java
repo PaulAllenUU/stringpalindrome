@@ -3,6 +3,7 @@ package loweconnex.com.stringpalindrome.controller;
 import loweconnex.com.stringpalindrome.model.PalindromeCheck;
 import loweconnex.com.stringpalindrome.service.SaveToFileService;
 import loweconnex.com.stringpalindrome.service.StringPalindomeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,6 +14,7 @@ public class StringPalindroneController {
 
     private final SaveToFileService saveToFileService;
 
+    @Autowired
     public StringPalindroneController(StringPalindomeService stringPalindomeService, SaveToFileService saveToFileService) {
         this.stringPalindomeService = stringPalindomeService;
         this.saveToFileService = saveToFileService;
